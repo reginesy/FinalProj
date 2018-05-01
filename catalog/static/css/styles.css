@@ -3,26 +3,31 @@ html {
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4 {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-variant: normal;
+  color: #CC3232;  
+}
+
 body {
+  background-image: url("http://www.uttarainfo.com/wp-content/uploads/2016/10/background3.jpg");
   margin: 0;
-  padding: 0;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
   font-family: "Raleway";
 }
 
-h1 {
-	font-family: Raleway;
-	font-style: normal;
-	font-variant: normal;
-}
 a {
   text-decoration: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 a:hover {
   text-decoration: none;
-  color: hotpink;
+  color: #488214;
 }
 
 .sidebar-nav {
