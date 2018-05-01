@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% block content %}
+	<h1>{{ owner.first_name }} {{ owner.last_name }}</h1>
+	<p><strong>Date of Birth: </strong> {{ owner.date_of_birth }} </p>
+	<p><strong>Location: </strong> {{ owner.location }}</p>
+
+	<div style="margin-left:20px;margin-top:20px">
+		<h4>Current Items</h4>
+		<dl>
+			{% for item in owner.item_set.all %}
+			<dt><a href="{% url 'item-detail' item.pk %}">{{item}}</a> ({{item.iteminstance_set.all.count}})</dt>
+			<dd>{{item.summary}}</dd>
+			{% endfor %}
+		</dl>
+	</div>
+{% endblock %}

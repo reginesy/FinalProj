@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Your Borrowed Items</h1>
+
+{% if iteminstance_list %}
+<ul>
+	{% for x in iteminstance_list %}
+	<li class = "{% if x.is_overdue %}text-danger{% endif %}">
+		<a href="{% url 'item-detail' x.item.pk %}">{{x.item.name}} </a> ({{ x.due_back }})
+	</li>
+	{%endfor%}
+</ul>
+
+{% else %}
+<p>You have not borrowed anything.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1><strong>Borrow Bro Home</strong></h1>
+<p>Welcome to <em>Borrow Bro</em>! Here, you can borrow anything under the sun.</p>
+
+<h2>Content</h2>
+<p>Currently, we have the following record count:</p>
+<ul>
+	<li><strong>Items:</strong> {{num_items}}</li>
+	<li><strong>Copies:</strong> {{num_instances}}</li>
+	<li><strong>Items Available:</strong> {{num_instances_available}}</li>
+	<li><strong>Owners:</strong> {{num_owners}}</li>
+</ul>
+
+<p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
+
+{% endblock %}
